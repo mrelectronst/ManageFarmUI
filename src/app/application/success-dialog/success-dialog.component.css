@@ -1,0 +1,20 @@
+h2 {
+  color: green;
+}
+
+mat-card {
+  min-width: 50%;
+}
+
+mat-divider {
+  margin-top: 1px;
+  margin-bottom: 5px;
+  background-color: wheat;
+}
+
+#success-dialog-header {
+  color: darkgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}

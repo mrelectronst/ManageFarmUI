@@ -1,0 +1,12 @@
+section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  width: 50dvh;
+  height: 40px;
+}
+
+mat-progress-bar {
+  margin: 0 10px;
+}
+

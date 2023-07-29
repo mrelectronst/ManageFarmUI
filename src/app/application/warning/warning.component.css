@@ -1,0 +1,17 @@
+mat-card {
+  min-width: 50%;
+}
+
+mat-divider {
+  margin-top: 1px;
+  margin-bottom: 5px;
+  background-color: wheat;
+}
+
+#warning-dialog-header {
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+

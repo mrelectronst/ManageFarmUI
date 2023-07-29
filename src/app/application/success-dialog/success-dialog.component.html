@@ -1,1 +1,16 @@
-<p>success-dialog works!</p>
+<h2 mat-dialog-title id="success-dialog-header">
+  Success</h2>
+
+<mat-divider></mat-divider>
+
+<mat-dialog-content>
+  <mat-card>
+    <mat-card-content>
+      <span *ngIf="data == null">The Process Completed Successfully</span>
+      <span *ngIf="data != null">{{data.message}}</span>
+    </mat-card-content>
+    <mat-dialog-actions align="center">
+      <button mat-raised-button color="primary" mat-dialog-close>Close</button>
+    </mat-dialog-actions>
+  </mat-card>
+</mat-dialog-content>
