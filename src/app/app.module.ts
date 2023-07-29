@@ -1,13 +1,9 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
-import { AnimalListComponent } from './presentation/animal/animal-list/animal-list.component';
-import { AnimalDetailComponent } from './presentation/animal/animal-detail/animal-detail.component';
-import { AnimalUpdateComponent } from './presentation/animal/animal-update/animal-update.component';
-import { WarningComponent } from './application/warning/warning.component';
-import { WaitingComponent } from './application/waiting/waiting.component';
-import { SuccessDialogComponent } from './application/success-dialog/success-dialog.component';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {AppComponent} from './app.component';
+import {WarningComponent} from './application/warning/warning.component';
+import {WaitingComponent} from './application/waiting/waiting.component';
+import {SuccessDialogComponent} from './application/success-dialog/success-dialog.component';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatInputModule} from "@angular/material/input";
 import {MatIconModule} from "@angular/material/icon";
@@ -17,13 +13,14 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatListModule} from "@angular/material/list";
 import {MatDialogModule} from "@angular/material/dialog";
 import {MatCardModule} from "@angular/material/card";
+import {HttpClientModule} from "@angular/common/http";
+import {MatButtonModule} from "@angular/material/button";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {AnimalModule} from "./presentation/animal/animal/animal.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    AnimalListComponent,
-    AnimalDetailComponent,
-    AnimalUpdateComponent,
     WarningComponent,
     WaitingComponent,
     SuccessDialogComponent
@@ -38,9 +35,14 @@ import {MatCardModule} from "@angular/material/card";
     MatPaginatorModule,
     MatListModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    AnimalModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

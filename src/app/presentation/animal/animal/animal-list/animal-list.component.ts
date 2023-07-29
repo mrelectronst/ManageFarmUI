@@ -3,9 +3,9 @@ import {FormBuilder, FormGroup} from "@angular/forms";
 import {MatSort} from "@angular/material/sort";
 import {MatPaginator} from "@angular/material/paginator";
 import {Router} from "@angular/router";
-import {AnimalFacade} from "../../../facade/animal/animal.facade";
+import {AnimalFacade} from "../../../../facade/animal/animal.facade";
 import {MatTableDataSource} from "@angular/material/table";
-import {Animal} from "../../../domain/animal/animal";
+import {Animal} from "../../../../domain/animal/animal";
 
 @Component({
   selector: 'app-animal-list',
@@ -27,7 +27,7 @@ export class AnimalListComponent implements OnInit {
 
   async ngOnInit() {
     this.InitializeFormObj();
-    await this.refreshOrders();
+    await this.refreshAnimals();
   }
 
   InitializeFormObj(): void {
@@ -36,7 +36,7 @@ export class AnimalListComponent implements OnInit {
     });
   }
 
-  async refreshOrders() {
+  async refreshAnimals() {
     let animals = await this.animalFacade.getAnimals();
     this.dataSource = new MatTableDataSource<Animal>(animals);
     this.dataSource.sort = this.sort;

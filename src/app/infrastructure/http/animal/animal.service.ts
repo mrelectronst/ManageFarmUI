@@ -17,7 +17,7 @@ export class AnimalService extends BaseAnimalService {
   }
 
   async getAnimals(): Promise<any> {
-    return await this.http.get<APIResponseModel<Animal[]>>(this.baseApiUrl + '/erp/orders').toPromise();
+    return await this.http.get<APIResponseModel<Animal[]>>(this.baseApiUrl + '/animals').toPromise();
   }
 
   async add(request: AnimalRequestModel): Promise<any> {

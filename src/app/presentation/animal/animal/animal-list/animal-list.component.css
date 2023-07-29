@@ -1,0 +1,86 @@
+.table-search {
+  width: 100%;
+  margin-right: 3dvw;
+}
+
+.pageButtons button {
+  margin-right: 10px;
+}
+
+mat-card {
+  height: auto;
+  background: #ebe2e2;
+  padding-left: 1dvw;
+}
+
+mat-form-field {
+  display: flex;
+  justify-content: end;
+  margin-top: 1dvh;
+}
+
+.mat-table-class {
+  margin-top: 6dvh;
+}
+
+.pageMainButtons {
+  margin-right: 1dvw;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.filter-table {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mat-input-filter {
+  height: auto;
+  width: auto;
+  margin-right: 2dvw;
+}
+
+.mat-input-filter mat-label {
+  font-size: 80%;
+}
+
+.searchInput {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+mat-card-content {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.table-title {
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.enteredWarehouseOrder-row {
+  background-color: gold;
+}
+
+.enteredWarehouseOrder-row:hover {
+  background-color: gold;
+}
+
+.th-row {
+  background-color: #ebe2e2;
+}
