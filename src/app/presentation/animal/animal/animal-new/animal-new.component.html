@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Add New Animal</h2>
+
+<mat-divider></mat-divider>
+
+<mat-dialog-content>
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="animalNewForm" class="d-flex flex-column">
+        <mat-form-field>
+          <mat-label>Animal Name</mat-label>
+          <input matInput
+                 formControlName="name">
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-divider></mat-divider>
+
+  <mat-dialog-actions align="center">
+    <button class="saveButton"
+            mat-raised-button color="primary"
+            (click)="add()">Add
+    </button>
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  </mat-dialog-actions>
+</mat-dialog-content>
+

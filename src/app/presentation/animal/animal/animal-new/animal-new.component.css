@@ -1,0 +1,14 @@
+mat-card {
+  min-width: 50%;
+}
+
+.saveButton {
+  margin-right: 50px;
+}
+
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: wheat;
+}
+
