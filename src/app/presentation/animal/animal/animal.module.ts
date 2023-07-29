@@ -11,14 +11,19 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import {MatSortModule} from "@angular/material/sort";
-
+import {MatCardModule} from "@angular/material/card";
+import {MatListModule} from "@angular/material/list";
+import {AnimalNewComponent} from './animal-new/animal-new.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatTooltipModule} from "@angular/material/tooltip";
 
 @NgModule({
   declarations: [
     AnimalComponent,
     AnimalDetailComponent,
     AnimalListComponent,
-    AnimalUpdateComponent
+    AnimalUpdateComponent,
+    AnimalNewComponent
   ],
   imports: [
     CommonModule,
@@ -28,13 +33,18 @@ import {MatSortModule} from "@angular/material/sort";
     MatButtonModule,
     MatIconModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatCardModule,
+    MatListModule,
+    MatDialogModule,
+    MatTooltipModule
   ],
   exports: [
     AnimalComponent,
     AnimalDetailComponent,
     AnimalListComponent,
-    AnimalUpdateComponent
+    AnimalUpdateComponent,
+    AnimalNewComponent
   ]
 })
 export class AnimalModule {

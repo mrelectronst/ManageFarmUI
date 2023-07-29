@@ -6,6 +6,8 @@ import {Router} from "@angular/router";
 import {AnimalFacade} from "../../../../facade/animal/animal.facade";
 import {MatTableDataSource} from "@angular/material/table";
 import {Animal} from "../../../../domain/animal/animal";
+import {MatDialog} from "@angular/material/dialog";
+import {AnimalDetailComponent} from "../animal-detail/animal-detail.component";
 
 @Component({
   selector: 'app-animal-list',
@@ -14,7 +16,7 @@ import {Animal} from "../../../../domain/animal/animal";
 })
 export class AnimalListComponent implements OnInit {
   animalListFormGroup!: FormGroup;
-  displayedAnimalTableColumns: string[] = ['edit', 'animalId', 'animalName'];
+  displayedAnimalTableColumns: string[] = ['edit', 'animalId', 'animalName', 'deleteIcon'];
   dataSource: any;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -22,7 +24,7 @@ export class AnimalListComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private animalFacade: AnimalFacade,
-              private router: Router) {
+              private dialog: MatDialog) {
   }
 
   async ngOnInit() {
@@ -46,11 +48,14 @@ export class AnimalListComponent implements OnInit {
     this.dataSource.filter = event.target.value.trim();
   }
 
-  async animaDetailPage(animalId: string) {
-    this.router.navigate(['/animaldetail'], {
-      queryParams: {
-        animalId: animalId
-      }
-    }).then(r => console.log(r));
+  async animalDetailPage(animalId: string) {
+    const dialogRef = this.dialog.open(AnimalDetailComponent, {
+      data: animalId
+    });
+  }
+
+  async deleteAnimal(id: string) {
+    await this.animalFacade.deleteAnimal(id);
+    await this.refreshAnimals();
   }
 }

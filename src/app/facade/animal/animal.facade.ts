@@ -24,14 +24,27 @@ export class AnimalFacade {
     return animals;
   }
 
-  async addAnimal(animalRequest: AnimalRequestModel): Promise<any> {
-    await this.animalService.add(animalRequest).then(
-      (r) => {
-        console.log(r.data);
+  async getAnimal(id: string): Promise<Animal> {
+    let animal!: Animal;
+    await this.animalService.getAnimal(id).then(
+      (result) => {
+        animal = result.data;
       }
-    ).catch(
-      (err) => this.dialog.open(WarningComponent)
     );
+    return animal;
+  }
+
+  async addAnimal(animalRequest: AnimalRequestModel): Promise<any> {
+    try {
+      const r = await this.animalService.add(animalRequest);
+      this.dialog.open(SuccessDialogComponent);
+    } catch (err: any) {
+      if (err.status == 404) {
+        this.dialog.open(WarningComponent, {
+          data: 'Same Name Found'
+        });
+      }
+    }
   }
 
   async deleteAnimal(id: string) {

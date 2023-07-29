@@ -20,6 +20,10 @@ export class AnimalService extends BaseAnimalService {
     return await this.http.get<APIResponseModel<Animal[]>>(this.baseApiUrl + '/animals').toPromise();
   }
 
+  async getAnimal(id: string): Promise<any> {
+    return await this.http.get<APIResponseModel<Animal>>(this.baseApiUrl + '/animal/' + id).toPromise();
+  }
+
   async add(request: AnimalRequestModel): Promise<any> {
     return await this.http.post<APIPostResponseModel<APIPostDataResponseModel>>(this.baseApiUrl + '/animal', request).toPromise();
   }

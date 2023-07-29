@@ -1,1 +1,21 @@
-<p>animal-detail works!</p>
+<h2 mat-dialog-title>Animal Detail</h2>
+
+<mat-divider></mat-divider>
+
+<mat-dialog-content>
+  <mat-card>
+    <mat-card-content>
+      <div class="labels-container">
+        <mat-label>Animal Id: {{this.animal.id}}</mat-label>
+        <mat-label>Animal Name: {{this.animal.name}}</mat-label>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-divider></mat-divider>
+
+  <mat-dialog-actions align="center">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+  </mat-dialog-actions>
+</mat-dialog-content>
+

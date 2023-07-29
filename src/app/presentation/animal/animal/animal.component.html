@@ -1,1 +1,17 @@
-<p>animal works!</p>
+<mat-card>
+  <mat-card-title>
+    <div class="main-card-title">
+      <span> My Animals
+        <mat-divider></mat-divider>
+      </span>
+      <button mat-fab color="warn"
+              class="pageMainButtons"
+              matTooltip="Create new animal"
+              (click)="routeNewDialog()">
+        <mat-icon>add_circle</mat-icon>
+      </button>
+    </div>
+  </mat-card-title>
+</mat-card>
+
+<app-animal-list></app-animal-list>

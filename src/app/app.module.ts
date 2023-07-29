@@ -17,6 +17,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {MatButtonModule} from "@angular/material/button";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AnimalModule} from "./presentation/animal/animal/animal.module";
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {AnimalModule} from "./presentation/animal/animal/animal.module";
     HttpClientModule,
     MatButtonModule,
     BrowserAnimationsModule,
-    AnimalModule
+    AnimalModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
